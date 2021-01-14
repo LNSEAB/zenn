@@ -1,12 +1,10 @@
-FROM alpine:latest
+FROM node:14
 
-RUN apk update && \
-	apk upgrade && \
-	apk add --no-cache nodejs npm git
+WORKDIR /workspace
 
-RUN mkdir /mnt/zenn
-WORKDIR /mnt/zenn
+RUN apt-get -y update && apt-get install -y --no-install-recommends git && apt-get clean
 
-RUN npm init --yes && npm install zenn-cli
-RUN npx zenn init
+RUN npm init --yes && \
+	npm install -g zenn-cli@latest && \
+	npx zenn init
 
