@@ -94,7 +94,7 @@ unsafe {
 マウスの右ボタンを押して離した瞬間にパニックを起こします。
 また、`cargo run --features=panic_create`とすると`WM_CREATE`でパニックを起こすようになります。
 
-https://github.com/LNSEAB/zenn/samples/catch_unwind_in_window_procedure
+https://github.com/LNSEAB/zenn/tree/main/samples/catch_unwind_in_window_procedure
 
 [^1]: FFI and panics - The Rustonomicon 
 https://doc.rust-lang.org/nomicon/ffi.html#ffi-and-panics
