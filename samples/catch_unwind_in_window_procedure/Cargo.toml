@@ -1,0 +1,17 @@
+[package]
+name = "catch_unwind_in_window_procedure"
+version = "0.1.0"
+authors = ["LNSEAB <691752+LNSEAB@users.noreply.github.com>"]
+edition = "2018"
+
+[features]
+panic_create = []
+
+[dependencies.winapi]
+version = "0.3.9"
+features = [
+    "libloaderapi",
+    "winuser",
+    "wingdi",
+    "impl-default",
+]
